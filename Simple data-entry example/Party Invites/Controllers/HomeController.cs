@@ -8,5 +8,10 @@ namespace Party_Invites.Controllers
         {
             return View();
         }
+
+        public ViewResult RsvpForm()
+        {
+            return View();
+        }
     }
 }
