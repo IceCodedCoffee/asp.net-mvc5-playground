@@ -1,4 +1,5 @@
-﻿using System.Web.Mvc;
+﻿using Party_Invites.Models;
+using System.Web.Mvc;
 
 namespace Party_Invites.Controllers
 {
@@ -9,9 +10,16 @@ namespace Party_Invites.Controllers
             return View();
         }
 
+        [HttpGet]
         public ViewResult RsvpForm()
         {
             return View();
+        }
+
+        [HttpPost]
+        public ViewResult RsvpForm(GuestResponse guestResponse)
+        {
+            return View("Thanks", guestResponse);
         }
     }
 }
