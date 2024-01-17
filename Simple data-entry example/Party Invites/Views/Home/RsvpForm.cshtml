@@ -11,17 +11,20 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>RsvpForm</title>
+    <link href="~/Content/Styles.css" rel="stylesheet" />
 </head>
 
 <body>
     @using (Html.BeginForm())
     {
+        @Html.ValidationSummary()
+
         <p>Your name:  @Html.TextBoxFor(x => x.Name) </p>
         <p>Your email: @Html.TextBoxFor(x => x.Email)</p>
         <p>Your phone: @Html.TextBoxFor(x => x.Phone)</p>
         <p>
             Will you attend?
-            @Html.DropDownListFor(x => x.WillAttend, new[] 
+            @Html.DropDownListFor(x => x.WillAttend, new[]
                 {
                     new SelectListItem()
                     {
