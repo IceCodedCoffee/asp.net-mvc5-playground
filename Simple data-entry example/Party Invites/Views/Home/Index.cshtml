@@ -6,17 +6,29 @@
 <!DOCTYPE html>
 
 <html>
+
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Index</title>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap-theme.css" rel="stylesheet" />
+    <link href="~/Content/Styles.css" rel="stylesheet" />
 </head>
-<body>
-    <div>
-        <p>
-            We're going to have an exciting party.<br />
 
+<body>
+
+    <div class="text-center">
+
+        <h2>We're going to have an exciting party!</h2>
+
+        <h3>And you are invited</h3>
+
+        <div class="btn btn-success">
             @Html.ActionLink("RSVP Now", "RsvpForm")
-        </p>
+        </div>
+
     </div>
+
 </body>
+
 </html>
