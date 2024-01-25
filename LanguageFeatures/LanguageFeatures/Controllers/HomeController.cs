@@ -242,7 +242,7 @@ namespace LanguageFeatures.Controllers
 
             products[2] = new Product { Name = "Stadium", Price = 79500M };
 
-            return View("Result", (object)String.Format("Sum: {0:c}", results));
+            return View("Result", (object)String.Format($"Sum: {results:c}"));
         }
     }
 }
