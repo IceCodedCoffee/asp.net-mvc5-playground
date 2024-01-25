@@ -1,6 +1,7 @@
 ﻿using LanguageFeatures.Models;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Web.Mvc;
 
@@ -116,7 +117,7 @@ namespace LanguageFeatures.Controllers
         {
             IEnumerable<Product> products = new ShoppingCart
             {
-                Products = new List<Product> 
+                Products = new List<Product>
                 {
                      new Product {Name = "Kayak", Category = "Watersports", Price = 275M},
                      new Product {Name = "Lifejacket", Category = "Watersports", Price = 48.95M},
@@ -139,7 +140,7 @@ namespace LanguageFeatures.Controllers
         {
             IEnumerable<Product> products = new ShoppingCart
             {
-                Products = new List<Product> 
+                Products = new List<Product>
                 {
                      new Product {Name = "Kayak", Category = "Watersports", Price = 275M},
                      new Product {Name = "Lifejacket", Category = "Watersports", Price = 48.95M},
@@ -160,7 +161,7 @@ namespace LanguageFeatures.Controllers
 
         public ViewResult CreateAnonArray()
         {
-            var oddsAndEnds = new[] 
+            var oddsAndEnds = new[]
             {
                  new { Name = "MVC", Category = "Pattern"},
                  new { Name = "Hat", Category = "Clothing"},
@@ -175,6 +176,73 @@ namespace LanguageFeatures.Controllers
             }
 
             return View("Result", (object)result.ToString());
+        }
+
+        public ViewResult FindProducts()
+        {
+            Product[] products =
+            {
+                     new Product {Name = "Kayak", Category = "Watersports", Price = 275M},
+                     new Product {Name = "Lifejacket", Category = "Watersports", Price = 48.95M},
+                     new Product {Name = "Soccer ball", Category = "Soccer", Price = 19.50M},
+                     new Product {Name = "Corner flag", Category = "Soccer", Price = 34.95M}
+            };
+
+            var foundProducts = products.OrderByDescending(e => e.Price)
+                                        .Take(3)
+                                        .Select(e => new { e.Name, e.Price });
+
+            StringBuilder result = new StringBuilder();
+
+            foreach (var p in foundProducts)
+            {
+                result.AppendFormat($"Name: {p.Name}, Price: {p.Price} ");
+            }
+
+            return View("Result", (object)result.ToString());
+        }
+
+        public ViewResult FindProductsDeferred()
+        {
+            Product[] products =
+            {
+                     new Product {Name = "Kayak", Category = "Watersports", Price = 275M},
+                     new Product {Name = "Lifejacket", Category = "Watersports", Price = 48.95M},
+                     new Product {Name = "Soccer ball", Category = "Soccer", Price = 19.50M},
+                     new Product {Name = "Corner flag", Category = "Soccer", Price = 34.95M}
+            };
+
+            var foundProducts = products.OrderByDescending(e => e.Price)
+                                        .Take(3)
+                                        .Select(e => new { e.Name, e.Price });
+
+            products[2] = new Product { Name = "Stadium", Price = 79600M };
+
+            StringBuilder result = new StringBuilder();
+
+            foreach (var p in foundProducts)
+            {
+                result.AppendFormat($"Name: {p.Name}, Price: {p.Price} ");
+            }
+
+            return View("Result", (object)result.ToString());
+        }
+
+        public ViewResult SumProductsImmediate()
+        {
+            Product[] products = 
+            {
+                 new Product {Name = "Kayak", Category = "Watersports", Price = 275M},
+                 new Product {Name = "Lifejacket", Category = "Watersports", Price = 48.95M},
+                 new Product {Name = "Soccer ball", Category = "Soccer", Price = 19.50M},
+                 new Product {Name = "Corner flag", Category = "Soccer", Price = 34.95M}
+            };
+
+            var results = products.Sum(e => e.Price);
+
+            products[2] = new Product { Name = "Stadium", Price = 79500M };
+
+            return View("Result", (object)String.Format("Sum: {0:c}", results));
         }
     }
 }
