@@ -133,5 +133,28 @@ namespace LanguageFeatures.Controllers
 
             return View("Result", (object)String.Format($"Total: {total}"));
         }
+
+        public ViewResult UseFilterExtensionMethodLambda()
+        {
+            IEnumerable<Product> products = new ShoppingCart
+            {
+                Products = new List<Product> 
+                {
+                     new Product {Name = "Kayak", Category = "Watersports", Price = 275M},
+                     new Product {Name = "Lifejacket", Category = "Watersports", Price = 48.95M},
+                     new Product {Name = "Soccer ball", Category = "Soccer", Price = 19.50M},
+                     new Product {Name = "Corner flag", Category = "Soccer", Price = 34.95M}
+                }
+            };
+
+            decimal total = 0;
+
+            foreach (Product prod in products.LambdaFilter(prod => prod.Category == "Soccer" || prod.Price > 20))
+            {
+                total += prod.Price;
+            }
+
+            return View("Result", (object)String.Format("Total: {0}", total));
+        }
     }
 }
