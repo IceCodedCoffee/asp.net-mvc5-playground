@@ -116,6 +116,11 @@
     <Content Include="Views\Home4\Index.cshtml" />
     <Content Include="Views\Home2\_ViewStart.cshtml" />
     <Content Include="Views\Home1\NameAndPrice.cshtml" />
+    <Content Include="Views\Home1\DemoExpressionElementContent.cshtml" />
+    <Content Include="Views\Home1\DemoExpressionElementAttributes.cshtml" />
+    <Content Include="Views\Home1\DemoExpressionConditional.cshtml" />
+    <Content Include="Views\Home1\DemoArray.cshtml" />
+    <Content Include="Views\Home1\DemoNamespace.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
