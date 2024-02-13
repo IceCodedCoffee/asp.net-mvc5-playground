@@ -7,7 +7,7 @@ namespace EssentialTools.Models
     {
         private IValueCalculator calc;
 
-        public ShoppingCart(IValueCalculator calcParam)
+        public ShoppingCart(IValueCalculator calcParam, IValueCalculator calc2)
         {
             calc = calcParam;
         }
