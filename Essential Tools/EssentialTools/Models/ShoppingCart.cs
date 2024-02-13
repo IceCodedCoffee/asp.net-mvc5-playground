@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace EssentialTools.Models
 {
-    public class ShoppingCart
+    public class ShoppingCart : IShoppingContainer
     {
         private IValueCalculator calc;
 
