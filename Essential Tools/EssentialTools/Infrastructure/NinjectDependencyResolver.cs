@@ -31,6 +31,7 @@ namespace EssentialTools.Infrastructure
         {
             kernel.Bind<IValueCalculator>().To<LinqValueCalculator>();
             kernel.Bind<IShoppingContainer>().To<ShoppingCart>();
+            kernel.Bind<IDiscountHelper>().To<DefaultDiscountHelper>();
         }
     }
 }
