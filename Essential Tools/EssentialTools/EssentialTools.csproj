@@ -112,6 +112,7 @@
     </Compile>
     <Compile Include="Infrastructure\NinjectDependencyResolver.cs" />
     <Compile Include="Models\DefaultDiscountHelper.cs" />
+    <Compile Include="Models\FlexibleDiscountHelper.cs" />
     <Compile Include="Models\Interfaces\IDiscountHelper.cs" />
     <Compile Include="Models\Interfaces\IShoppingContainer.cs" />
     <Compile Include="Models\Interfaces\IValueCalculator.cs" />
