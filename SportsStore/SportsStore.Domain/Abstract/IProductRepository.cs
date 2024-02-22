@@ -5,6 +5,6 @@ namespace SportsStore.Domain.Abstract
 {
     public interface IProductRepository
     {
-        IEnumerable<Product> GetProducts { get; }
+        IEnumerable<Product> Products { get; }
     }
 }
