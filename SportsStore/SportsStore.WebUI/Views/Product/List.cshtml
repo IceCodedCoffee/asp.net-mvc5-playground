@@ -6,19 +6,17 @@
     ViewBag.Title = "Products";
 }
 
-<h2>List</h2>
-
 @foreach (var product in Model.Products)
 {
-    <div>
-        <h3>@product.Name</h3>
-
-        @product.Description
-
-        <h4>@product.Price.ToString("c")</h4>
+    <div class="well">
+        <h3>
+            <strong>@product.Name</strong>
+            <span class="pull-right label label-primary">@product.Price.ToString("c")</span>
+        </h3>
+        <span class="lead"> @product.Description</span>
     </div>
 }
 
-<div>
+<div class="btn-group pull-right">
     @Html.PageLinks(Model.PagingInfo, x => Url.Action("List", new { page = x }))
 </div>
