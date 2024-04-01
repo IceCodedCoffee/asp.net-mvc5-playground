@@ -141,7 +141,7 @@ namespace SportsStore.UnitTests
         }
 
         [TestMethod]
-        public void Adding_Product_To_Cart_Goes_To_Cart_Screen()
+        public void Adding_Product_Stays_In_List_Screen()
         {
             // Arrange - create the mock repository
             Mock<IProductRepository> mock = new Mock<IProductRepository>();
@@ -161,8 +161,8 @@ namespace SportsStore.UnitTests
             RedirectToRouteResult result = target.AddToCart(cart, 2, "myUrl");
 
             // Assert
-            Assert.AreEqual(result.RouteValues["action"], "Index");
-            Assert.AreEqual(result.RouteValues["returnUrl"], "myUrl");
+            Assert.AreEqual(result.RouteValues["action"], "List");
+            Assert.AreEqual(result.RouteValues["category"], "myUrl");
         }
 
         [TestMethod]

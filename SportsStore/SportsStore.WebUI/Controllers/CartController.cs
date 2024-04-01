@@ -30,7 +30,7 @@ namespace SportsStore.WebUI.Controllers
                 cart.AddItem(product, 1);
             }
 
-            return RedirectToAction("Index", new { returnUrl });
+            return RedirectToAction("List", "Product", new { category = returnUrl?.TrimStart('/') });
         }
 
         public RedirectToRouteResult RemoveFromCart(Cart cart, int productId, string returnUrl)
