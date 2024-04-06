@@ -11,24 +11,78 @@ namespace SportsStore.WebUI.HtmlHelpers
         {
             StringBuilder result = new StringBuilder();
 
-            for (int i = 1; i <= pagingInfo.TotalPages; i++)
+            TagBuilder tag = new TagBuilder("a");
+            tag.MergeAttribute("href", pageUrl(pagingInfo.CurrentPage - 1));
+            tag.InnerHtml = "<";
+
+            if (pagingInfo.CurrentPage < 2)
             {
-                TagBuilder tag = new TagBuilder("a");
+                tag.AddCssClass("disabled");
+            }
 
-                tag.MergeAttribute("href", pageUrl(i));
+            tag.AddCssClass("btn btn-default");
+            result.Append(tag.ToString() + " ");
 
-                tag.InnerHtml = i.ToString();
 
-                if (i == pagingInfo.CurrentPage)
+            if (pagingInfo.CurrentPage > 2)
+            {
+                tag = new TagBuilder("a");
+                tag.MergeAttribute("href", pageUrl(1));
+                tag.InnerHtml = "1";
+                tag.AddCssClass("btn btn-default");
+                result.Append(tag.ToString() + " ");
+
+                if (pagingInfo.CurrentPage > 3)
                 {
-                    tag.AddCssClass("selected");
-                    tag.AddCssClass("btn-primary");
+                    result.Append(" ... ");
+                }
+            }
+
+            if (pagingInfo.CurrentPage >= 1)
+            {
+                for (int i = pagingInfo.CurrentPage == 1 ? pagingInfo.CurrentPage : pagingInfo.CurrentPage - 1; i <= pagingInfo.CurrentPage + 1 && i <= pagingInfo.TotalPages; i++)
+                {
+                    tag = new TagBuilder("a");
+                    tag.MergeAttribute("href", pageUrl(i));
+                    tag.InnerHtml = i.ToString();
+
+                    if (i == pagingInfo.CurrentPage)
+                    {
+                        tag.AddCssClass("selected");
+                        tag.AddCssClass("btn-primary");
+                    }
+
+                    tag.AddCssClass("btn btn-default");
+                    result.Append(tag.ToString() + " ");
+                }
+            }
+
+            if (pagingInfo.CurrentPage < pagingInfo.TotalPages - 1)
+            {
+                if (pagingInfo.CurrentPage + 2 != pagingInfo.TotalPages)
+                {
+                    result.Append(" ... ");
                 }
 
+                tag = new TagBuilder("a");
+                tag.MergeAttribute("href", pageUrl(pagingInfo.TotalPages));
+                tag.InnerHtml = pagingInfo.TotalPages.ToString();
                 tag.AddCssClass("btn btn-default");
-
                 result.Append(tag.ToString() + " ");
             }
+
+
+            tag = new TagBuilder("a");
+            tag.MergeAttribute("href", pageUrl(pagingInfo.CurrentPage + 1));
+            tag.InnerHtml = ">";
+
+            if (pagingInfo.CurrentPage == pagingInfo.TotalPages)
+            {
+                tag.AddCssClass("disabled");
+            }
+
+            tag.AddCssClass("btn btn-default");
+            result.Append(tag.ToString());
 
             return MvcHtmlString.Create(result.ToString());
         }
