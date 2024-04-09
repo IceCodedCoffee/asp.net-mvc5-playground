@@ -16,7 +16,7 @@ namespace SportsStore.WebUI.HtmlHelpers
             if (pagingInfo.CurrentPage > 1)
             {
                 tag.MergeAttribute("href", pageUrl(pagingInfo.CurrentPage - 1));
-                tag.InnerHtml = "<";
+                tag.InnerHtml = "<span class=\"glyphicon glyphicon-backward\"></span>";
                 tag.AddCssClass("btn btn-default");
                 result.Append(tag.ToString() + " ");
             }
@@ -69,7 +69,7 @@ namespace SportsStore.WebUI.HtmlHelpers
             {
                 tag = new TagBuilder("a");
                 tag.MergeAttribute("href", pageUrl(pagingInfo.CurrentPage + 1));
-                tag.InnerHtml = ">";
+                tag.InnerHtml = "<span class=\"glyphicon glyphicon-forward\"></span>";
                 tag.AddCssClass("btn btn-default");
                 result.Append(tag.ToString());
             }
