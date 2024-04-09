@@ -35,23 +35,20 @@ namespace SportsStore.WebUI.HtmlHelpers
                 }
             }
 
-            if (pagingInfo.CurrentPage >= 1)
+            for (int i = pagingInfo.CurrentPage == 1 ? pagingInfo.CurrentPage : pagingInfo.CurrentPage - 1; i <= pagingInfo.CurrentPage + 1 && i <= pagingInfo.TotalPages; i++)
             {
-                for (int i = pagingInfo.CurrentPage == 1 ? pagingInfo.CurrentPage : pagingInfo.CurrentPage - 1; i <= pagingInfo.CurrentPage + 1 && i <= pagingInfo.TotalPages; i++)
+                tag = new TagBuilder("a");
+                tag.MergeAttribute("href", pageUrl(i));
+                tag.InnerHtml = i.ToString();
+
+                if (i == pagingInfo.CurrentPage)
                 {
-                    tag = new TagBuilder("a");
-                    tag.MergeAttribute("href", pageUrl(i));
-                    tag.InnerHtml = i.ToString();
-
-                    if (i == pagingInfo.CurrentPage)
-                    {
-                        tag.AddCssClass("selected");
-                        tag.AddCssClass("btn-primary");
-                    }
-
-                    tag.AddCssClass("btn btn-default");
-                    result.Append(tag.ToString() + " ");
+                    tag.AddCssClass("selected");
+                    tag.AddCssClass("btn-primary");
                 }
+
+                tag.AddCssClass("btn btn-default");
+                result.Append(tag.ToString() + " ");
             }
 
             if (pagingInfo.CurrentPage < pagingInfo.TotalPages - 1)
