@@ -10,6 +10,8 @@
 
 @using (Html.BeginForm())
 {
+    @Html.ValidationSummary()
+
     <h3>Ship to</h3>
 
     <div class="form-group">
@@ -25,6 +27,7 @@
         {
             <div class="form-group">
                 <label>@(property.DisplayName ?? property.PropertyName)</label>
+                @Html.ValidationMessage(property.PropertyName)
                 @Html.TextBox(property.PropertyName, null, new { @class = "form-control" })
             </div>
         }
