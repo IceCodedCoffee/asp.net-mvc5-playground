@@ -13,7 +13,7 @@
 
     </div>
 
-    @using (Html.BeginForm())
+    @using (Html.BeginForm("Edit", "Admin", FormMethod.Post, new { novalidate = "novalidate" }))
     {
         <div class="panel-body">
 
@@ -26,6 +26,8 @@
                     <div class="form-group">
 
                         <label>@(property.DisplayName ?? property.PropertyName)</label>
+
+                        @Html.ValidationMessage(property.PropertyName)
 
                         @if (property.PropertyName == "Description")
                         {
