@@ -25,7 +25,10 @@ namespace UrlsAndRoutes
             //routes.MapRoute("ControllerDefaultActionDefault", "{controller}/{action}", new { controller = "Customer", action = "List"});
 
             //// 7.
-            routes.MapRoute("PublicMixed","Public/{controller}/{action}");
+            //routes.MapRoute("PublicMixed","Public/{controller}/{action}");
+
+            //// 8.
+            routes.MapRoute("XMixed","X{controller}/{action}");
         }
     }
 }

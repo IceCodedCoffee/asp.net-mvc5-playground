@@ -111,9 +111,13 @@ namespace UrlsAndRoutes.Tests
             //// ensure that too many segments fails to match
             //TestRouteFail("~/Admin/Index/Segment");
 
-            // 7.
-            TestRouteMatch("~/Public/Admin/List", "Admin", "List");
-            TestRouteFail("~/Admin/Index/");
+            //// 7.
+            //TestRouteMatch("~/Public/Admin/List", "Admin", "List");
+            //TestRouteFail("~/Admin/Index/");
+
+            // 8.
+            TestRouteMatch("~/XAdmin/List", "Admin", "List");
+            TestRouteFail("~/Admin/List/");
         }
     }
 }
