@@ -9,8 +9,8 @@ namespace UrlsAndRoutes
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
-            // 3.
-            routes.MapRoute("ControllerAction", "{controller}/{action}", new { action = "List"});
+            // 5.
+            routes.MapRoute("ControllerAction", "{controller}/{action}", new { controller = "Customer", action = "List"});
         }
     }
 }
