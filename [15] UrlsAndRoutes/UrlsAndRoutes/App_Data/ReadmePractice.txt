@@ -6,3 +6,5 @@
 // use MapRoute from here on out
 
 2. Remap old URL Shop/Index whose controller has been refactored away to Customer/List
+
+3. Define a dynamic route to any controller/action
