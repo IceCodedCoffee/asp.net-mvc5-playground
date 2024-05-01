@@ -10,3 +10,5 @@
 3. Define a dynamic route to any controller/action
 
 4. Define a dynamic route that defaults to the list action if no action in the URL is provided
+
+5. Define a dynamic route that defaults to the list action of the CustomerController if no controller nor action in the URL is provided
