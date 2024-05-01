@@ -10,6 +10,7 @@ namespace UrlsAndRoutes
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             // 2.
+            routes.MapRoute("ShopIndex", "Shop/Index", new { controller = "Customer", action = "List" });
         }
     }
 }
