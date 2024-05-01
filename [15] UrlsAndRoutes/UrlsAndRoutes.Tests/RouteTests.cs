@@ -115,9 +115,14 @@ namespace UrlsAndRoutes.Tests
             //TestRouteMatch("~/Public/Admin/List", "Admin", "List");
             //TestRouteFail("~/Admin/Index/");
 
-            // 8.
-            TestRouteMatch("~/XAdmin/List", "Admin", "List");
-            TestRouteFail("~/Admin/List/");
+            //// 8.
+            //TestRouteMatch("~/XAdmin/List", "Admin", "List");
+            //TestRouteFail("~/Admin/List/");
+
+            // 9.
+            TestRouteMatch("~/Shop/Index", "Customer", "Index");
+            TestRouteMatch("~/Shop/List", "Customer", "List");
+            TestRouteFail("~/Shop");
         }
     }
 }
