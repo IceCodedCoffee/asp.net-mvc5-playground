@@ -12,3 +12,7 @@
 4. Define a dynamic route that defaults to the list action if no action in the URL is provided
 
 5. Define a dynamic route that defaults to the list action of the CustomerController if no controller nor action in the URL is provided
+
+6. Unit tests
+
+7. Comment out previous routes and define a route that must begin with /Public but otherwise matches any controller/action with no default and unit test
