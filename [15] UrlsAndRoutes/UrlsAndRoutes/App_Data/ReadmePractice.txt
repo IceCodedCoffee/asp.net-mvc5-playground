@@ -20,3 +20,5 @@
 8. Comment out previous routes and define a route the controller name must begin with 'X' but otherwise matches any controller/action with no default and unit test
 
 9. Comment out previous routes and remap old URL /Shop to /Customer but leave the action dynamic and unit test
+
+10. Fix the routing and unit test

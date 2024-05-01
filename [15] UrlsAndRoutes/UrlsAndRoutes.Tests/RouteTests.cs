@@ -87,37 +87,37 @@ namespace UrlsAndRoutes.Tests
         [TestMethod]
         public void TestIncomingRoutes()
         {
-            //// check that the values are being obtained from the segments
-            //TestRouteMatch("~/One/Two", "One", "Two");
+            // check that the values are being obtained from the segments
+            TestRouteMatch("~/One/Two", "One", "Two");
 
-            //// 1.
-            //TestRouteMatch("~/Customer/Index", "Customer", "Index");
+            // 1.
+            TestRouteMatch("~/Customer/Index", "Customer", "Index");
 
-            //// 2.
-            //TestRouteMatch("~/Shop/Index", "Customer", "List");
+            // 2.
+            TestRouteMatch("~/Shop/Index", "Customer", "List");
 
-            //// 3.
-            //TestRouteMatch("~/Home/Index", "Home", "Index");
-            //TestRouteMatch("~/Customer/Index", "Customer", "Index");
-            //TestRouteMatch("~/Customer/List", "Customer", "List");
-            //TestRouteMatch("~/Admin/List", "Admin", "List");
+            // 3.
+            TestRouteMatch("~/Home/Index", "Home", "Index");
+            TestRouteMatch("~/Customer/Index", "Customer", "Index");
+            TestRouteMatch("~/Customer/List", "Customer", "List");
+            TestRouteMatch("~/Admin/List", "Admin", "List");
 
-            //// 4.
-            //TestRouteMatch("~/Customer", "Customer", "List");
+            // 4.
+            TestRouteMatch("~/Customer", "Customer", "List");
 
-            //// 5.
-            //TestRouteMatch("~/", "Customer", "List");
+            // 5.
+            TestRouteMatch("~/", "Customer", "List");
 
-            //// ensure that too many segments fails to match
-            //TestRouteFail("~/Admin/Index/Segment");
+            // ensure that too many segments fails to match
+            TestRouteFail("~/Admin/Index/Segment");
 
-            //// 7.
-            //TestRouteMatch("~/Public/Admin/List", "Admin", "List");
-            //TestRouteFail("~/Admin/Index/");
+            // 7.
+            TestRouteMatch("~/Public/Admin/List", "Admin", "List");
+            TestRouteFail("~/Admin/Index/");
 
-            //// 8.
-            //TestRouteMatch("~/XAdmin/List", "Admin", "List");
-            //TestRouteFail("~/Admin/List/");
+            // 8.
+            TestRouteMatch("~/XAdmin/List", "Admin", "List");
+            TestRouteFail("~/Admin/List/");
 
             // 9.
             TestRouteMatch("~/Shop/Index", "Customer", "Index");
