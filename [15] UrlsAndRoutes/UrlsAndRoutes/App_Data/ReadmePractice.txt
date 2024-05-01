@@ -8,3 +8,5 @@
 2. Remap old URL Shop/Index whose controller has been refactored away to Customer/List
 
 3. Define a dynamic route to any controller/action
+
+4. Define a dynamic route that defaults to the list action if no action in the URL is provided
