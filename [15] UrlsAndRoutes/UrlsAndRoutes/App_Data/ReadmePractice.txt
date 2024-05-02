@@ -25,3 +25,5 @@
 
 11. Define 2 custom segment variables, the second with a default value and use 2 different ways to obtain them. 
 	Render them in a new view Home/CustomVariables.
+
+12. Define the 'order' segment variable as optional and give it a default value outside of the routing definition.
