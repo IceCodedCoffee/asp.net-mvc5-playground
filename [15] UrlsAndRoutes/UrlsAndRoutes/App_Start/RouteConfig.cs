@@ -9,7 +9,7 @@ namespace UrlsAndRoutes
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
-            routes.MapRoute("CustomSegmentVariables", "{controller}/{action}/{id}/{order}");
+            routes.MapRoute("CustomSegmentVariables", "{controller}/{action}/{id}/{order}", new { order = UrlParameter.Optional });
         }
     }
 }

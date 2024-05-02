@@ -12,7 +12,7 @@ namespace UrlsAndRoutes.Controllers
             return View("ActionName");
         }
 
-        public ActionResult CustomVariables(string order)
+        public ActionResult CustomVariables(string order = "DefaultOrder")
         {
             ViewBag.Controller = "Home";
             ViewBag.Action = "CustomVariables";
