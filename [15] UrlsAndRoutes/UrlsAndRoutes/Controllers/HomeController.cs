@@ -11,5 +11,15 @@ namespace UrlsAndRoutes.Controllers
 
             return View("ActionName");
         }
+
+        public ActionResult CustomVariables(string order)
+        {
+            ViewBag.Controller = "Home";
+            ViewBag.Action = "CustomVariables";
+            ViewBag.CustomVariableId = RouteData.Values["id"];
+            ViewBag.CustomVariableOrder = order;
+
+            return View();
+        }
     }
 }
