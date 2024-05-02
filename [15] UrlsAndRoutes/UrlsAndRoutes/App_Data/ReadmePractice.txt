@@ -22,3 +22,6 @@
 9. Comment out previous routes and remap old URL /Shop to /Customer but leave the action dynamic and unit test
 
 10. Fix the routing and unit test
+
+11. Define 2 custom segment variables, the second with a default value and use 2 different ways to obtain them. 
+	Render them in a new view Home/CustomVariables.

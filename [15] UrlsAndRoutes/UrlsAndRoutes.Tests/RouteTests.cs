@@ -87,25 +87,15 @@ namespace UrlsAndRoutes.Tests
         [TestMethod]
         public void TestIncomingRoutes()
         {
-            TestRouteMatch("~/One/Two", "One", "Two");
+            TestRouteMatch("~/", "Home", "Index", new { id = "DefaultId" });
 
-            TestRouteMatch("~/Shop/Index", "Customer", "List");
-            TestRouteMatch("~/Shop/List", "Customer", "List");
+            TestRouteMatch("~/Customer", "Customer", "index", new { id = "DefaultId" });
 
-            TestRouteMatch("~/Public/Admin/List", "Admin", "List");
+            TestRouteMatch("~/Customer/List", "Customer", "List", new { id = "DefaultId" });
 
-            TestRouteMatch("~/XAdmin/List", "Admin", "List");
+            TestRouteMatch("~/Customer/List/All", "Customer", "List", new { id = "All" });
 
-            TestRouteMatch("~/Customer", "Customer", "List");
-
-            TestRouteMatch("~/", "Customer", "List");
-
-            TestRouteMatch("~/Home/Index", "Home", "Index");
-            TestRouteMatch("~/Customer/Index", "Customer", "Index");
-            TestRouteMatch("~/Customer/List", "Customer", "List");
-            TestRouteMatch("~/Admin/List", "Admin", "List");
-            
-            TestRouteFail("~/Admin/Index/Segment");
+            TestRouteFail("~/Customer/List/All/Delete");
         }
     }
 }
