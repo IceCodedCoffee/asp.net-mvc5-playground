@@ -17,6 +17,7 @@ namespace UrlsAndRoutes.Controllers
             ViewBag.Controller = "Home";
             ViewBag.Action = "CustomVariables";
             ViewBag.CustomVariableId = RouteData.Values["id"];
+            ViewBag.CustomCatchallVariable = RouteData.Values["catchall"];
 
             return View();
         }
