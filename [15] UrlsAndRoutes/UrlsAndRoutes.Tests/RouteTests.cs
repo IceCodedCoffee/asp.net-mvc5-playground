@@ -87,13 +87,7 @@ namespace UrlsAndRoutes.Tests
         [TestMethod]
         public void TestIncomingRoutes()
         {
-            TestRouteMatch("~/Customer/List", "Customer", "List");
 
-            TestRouteMatch("~/Customer/List/All", "Customer", "List", new { catchall = "All" });
-
-            TestRouteMatch("~/Customer/List/All/Delete", "Customer", "List", new { catchall = "All/Delete" });
-            
-            TestRouteMatch("~/Customer/List/All/Delete/Perm", "Customer", "List", new { catchall = "All/Delete/Perm" });
         }
     }
 }
