@@ -34,4 +34,4 @@
 	requests to the old HomeController. -> done
 
 15. All request to /Home shall be handled by the HomeController in the AdditionalControllers namespace, all other requests by
-	the Controllers namespace.
+	the Controllers namespace. -> done
