@@ -32,3 +32,6 @@
 
 14. Given a new controller Home in AdditionalControllers, route any URL starting with /Home to the new Controller and any other 
 	requests to the old HomeController. -> done
+
+15. All request to /Home shall be handled by the HomeController in the AdditionalControllers namespace, all other requests by
+	the Controllers namespace.
