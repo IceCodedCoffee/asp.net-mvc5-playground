@@ -35,3 +35,6 @@
 
 15. All request to /Home shall be handled by the HomeController in the AdditionalControllers namespace, all other requests by
 	the Controllers namespace. -> done
+
+16. All request to /Home shall be handled by the HomeController in the AdditionalControllers namespace, if a match cannot be found 
+	there, prevent the routing system from looking in other namespaces.
