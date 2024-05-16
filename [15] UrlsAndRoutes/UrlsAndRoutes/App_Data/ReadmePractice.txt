@@ -48,4 +48,4 @@
 19. Constrain the given route so that it matches only when the id consists of characters a-z and is at least 6 characters long.
 	-> done
 
-20. Define a route that always routes all Firefox users to Home/Index regardless of the URL
+20. Define a route that always routes all Firefox users to Home/Index regardless of the URL. -> done
