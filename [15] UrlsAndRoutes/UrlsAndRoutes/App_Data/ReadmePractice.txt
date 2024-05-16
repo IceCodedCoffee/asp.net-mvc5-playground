@@ -38,3 +38,6 @@
 
 16. All request to /Home shall be handled by the HomeController in the AdditionalControllers namespace, if a match cannot be found 
 	there, prevent the routing system from looking in other namespaces. -> done
+
+17. Define a route that only matches controllers that start with the letter H and matches only actions that start with
+	either Index or About. Additionally match only requests that use the GET-Http method.
