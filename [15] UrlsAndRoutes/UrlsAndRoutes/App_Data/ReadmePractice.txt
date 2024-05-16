@@ -52,7 +52,7 @@
 
 21. Define a route that maps the request /test to Customer/Index using attribute routing. -> done
 
-22. Define a route that maps the request /Users/Add/"any string/"any int" to Customer/Create using attribute routing.
+22. Define a route that maps the request /Users/Add/"any string/"any int" to Customer/Create using attribute routing. -> done
 
 23. Refactor route /User/Add/'any string'/'any int' so that any int is constrained to ints and refactor route
-	/Users/Add/any string/any string so that the 2nd any string only takes exactly 6 letters.
+	/Users/Add/any string/any string so that the 2nd any string only takes exactly 6 letters. -> done

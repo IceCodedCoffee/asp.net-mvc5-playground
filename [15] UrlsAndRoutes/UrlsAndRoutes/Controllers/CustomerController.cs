@@ -13,13 +13,13 @@ namespace UrlsAndRoutes.Controllers
             return View("ActionName");
         }
 
-        [Route("Users/Add/{user}/{id}")]
+        [Route("Users/Add/{user}/{id:int}")]
         public string Create(string user, int id)
         {
             return $"User: {user}, ID: {id}";
         }
 
-        [Route("Users/Add/{user}/{password}")]
+        [Route("Users/Add/{user}/{password:alpha:length(6)}")]
         public string ChangePass(string user, string password)
         {
             return $"ChangePass Method - User: {user}, Pass: {password}";
