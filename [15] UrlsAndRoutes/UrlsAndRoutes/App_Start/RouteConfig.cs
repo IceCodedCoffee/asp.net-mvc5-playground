@@ -1,5 +1,4 @@
 ﻿using System.Web.Mvc;
-using System.Web.Mvc.Routing.Constraints;
 using System.Web.Routing;
 
 namespace UrlsAndRoutes
@@ -9,17 +8,6 @@ namespace UrlsAndRoutes
         public static void RegisterRoutes(RouteCollection routes)
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
-
-            routes.MapRoute("MyRoute", "{controller}/{action}/{id}",
-                new { controller = "Home", action = "Index" },
-                new
-                {
-                    id = new CompoundRouteConstraint(new IRouteConstraint[] {
-                            new AlphaRouteConstraint(),
-                            new MinLengthRouteConstraint(6)
-                    })
-                }
-            );
         }
     }
 }
