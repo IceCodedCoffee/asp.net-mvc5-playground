@@ -58,4 +58,4 @@
 	/Users/Add/any string/any string so that the 2nd any string only takes exactly 6 letters. -> done
 
 24. Refactor all routes, apart from the route to Index, so that they and any future actions can be reached via an URL
-	that starts with /Users. Index shall still be reached via /Test.
+	that starts with /Users. Index shall still be reached via /Test. -> done

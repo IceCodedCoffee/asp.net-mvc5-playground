@@ -2,9 +2,10 @@
 
 namespace UrlsAndRoutes.Controllers
 {
+    [RoutePrefix("Users")]
     public class CustomerController : Controller
     {
-        [Route("Test")]
+        [Route("~/Test")]
         public ActionResult Index()
         {
             ViewBag.Controller = "Customer";
@@ -13,13 +14,13 @@ namespace UrlsAndRoutes.Controllers
             return View("ActionName");
         }
 
-        [Route("Users/Add/{user}/{id:int}")]
+        [Route("Add/{user}/{id:int}")]
         public string Create(string user, int id)
         {
             return $"User: {user}, ID: {id}";
         }
 
-        [Route("Users/Add/{user}/{password:alpha:length(6)}")]
+        [Route("Add/{user}/{password:alpha:length(6)}")]
         public string ChangePass(string user, string password)
         {
             return $"ChangePass Method - User: {user}, Pass: {password}";
