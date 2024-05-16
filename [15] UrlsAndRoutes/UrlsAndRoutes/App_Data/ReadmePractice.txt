@@ -51,3 +51,5 @@
 20. Define a route that always routes all Firefox users to Home/Index regardless of the URL. -> done
 
 21. Define a route that maps the request /test to Customer/Index using attribute routing. -> done
+
+22. Define a route that maps the request /Users/Add/"any string/"any int" to Customer/Create using attribute routing.

@@ -13,6 +13,11 @@ namespace UrlsAndRoutes.Controllers
             return View("ActionName");
         }
 
+        public string Create(string user, int id)
+        {
+            return $"User: {user}, ID: {id}";
+        }
+
         public ActionResult List()
         {
             ViewBag.Controller = "Customer";
