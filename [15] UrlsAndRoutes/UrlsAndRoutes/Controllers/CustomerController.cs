@@ -13,6 +13,7 @@ namespace UrlsAndRoutes.Controllers
             return View("ActionName");
         }
 
+        [Route("Users/Add/{user}/{id}")]
         public string Create(string user, int id)
         {
             return $"User: {user}, ID: {id}";
