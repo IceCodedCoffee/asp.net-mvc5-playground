@@ -1,5 +1,4 @@
 ﻿using System.Web.Mvc;
-using System.Web.Mvc.Routing.Constraints;
 using System.Web.Routing;
 
 namespace UrlsAndRoutes
@@ -10,9 +9,8 @@ namespace UrlsAndRoutes
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
-            routes.MapRoute("MyRoute", "{controller}/{action}/{id}", 
-                new { controller = "Home", action = "Index"}, 
-                new { id = new RangeRouteConstraint(10, 20) }
+            routes.MapRoute("MyRoute", "{controller}/{action}/{id}",
+                new { controller = "Home", action = "Index" }
             );
         }
     }
