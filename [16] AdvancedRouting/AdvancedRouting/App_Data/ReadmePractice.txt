@@ -12,3 +12,5 @@
    FragmentId is 'FragmentId'.
 
 7. Generate the URL to /Home/Index/newId as plain text
+
+8. Generate the URL to /Home/Index/newId and to /Home/Index as plain text in a new Action and render the result.
