@@ -22,10 +22,5 @@ namespace AdvancedRouting.Controllers
 
             return View();
         }
-
-        public RedirectToRouteResult UrlsInActions()
-        {
-            return RedirectToAction("Index");
-        }
     }
 }

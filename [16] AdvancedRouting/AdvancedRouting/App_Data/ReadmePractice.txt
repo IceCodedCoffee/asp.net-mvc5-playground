@@ -16,3 +16,5 @@
 8. Generate the URL to /Home/Index/newId and to /Home/Index as plain text in a new Action and render the result.
 
 9. Redirect the request to /Home/UrlsAndActions to /Home/Index using the action name alone.
+
+10. Redirect the request to /Home/UrlsAndActions to /Home/Index/Id using an anonymous type.
