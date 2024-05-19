@@ -7,3 +7,6 @@
 4. In the ActionName-View, generate an outgoing URL that puts the string "Hello" into a optional segment variable.
 
 5. Generate an outgoing URL where the id is set to 'anchorId' and the class to 'cssClass'.
+
+6. Generate an fully qualified outgoing URL where domain is 'myserver.domain.com', fragment is 'myFragmentName', 
+   FragmentId is 'FragmentId'.
