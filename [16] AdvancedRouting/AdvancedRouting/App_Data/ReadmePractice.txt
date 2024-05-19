@@ -10,3 +10,5 @@
 
 6. Generate an fully qualified outgoing URL where domain is 'myserver.domain.com', fragment is 'myFragmentName', 
    FragmentId is 'FragmentId'.
+
+7. Generate the URL to /Home/Index/newId as plain text
