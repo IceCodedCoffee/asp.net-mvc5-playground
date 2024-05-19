@@ -11,7 +11,7 @@ namespace AdvancedRouting
 
             routes.MapMvcAttributeRoutes();
 
-            routes.MapRoute("MyRoute", "{controller}/{action}", new { controller = "Home", action = "Index" });
+            routes.MapRoute("MyRoute", "{controller}/{action}/{id}", new { controller = "Home", action = "Index", id = UrlParameter.Optional });
         }
     }
 }
