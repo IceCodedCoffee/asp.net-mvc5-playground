@@ -22,5 +22,18 @@ namespace AdvancedRouting.Controllers
 
             return View();
         }
+
+        public ViewResult UrlsInActions()
+        {
+            string myActionUrl = Url.Action("Index", new { id = "MyID" });
+
+            string myRouteUrl = Url.RouteUrl(new { controller = "Home", action = "Index" });
+
+            ViewBag.MyActionUrl = myActionUrl;
+
+            ViewBag.myRouteUrl = myRouteUrl;
+
+            return View();
+        }
     }
 }
