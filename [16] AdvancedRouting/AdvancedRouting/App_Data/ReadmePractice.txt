@@ -28,4 +28,4 @@
 
 14. Resolve the ambiguous controller issue and prioritize the controller from the main application.
 
-15. Define a route for the CustomerController using Attribute routing.
+15. Define an Area 'Services' for the CustomerController using Attribute routing.
