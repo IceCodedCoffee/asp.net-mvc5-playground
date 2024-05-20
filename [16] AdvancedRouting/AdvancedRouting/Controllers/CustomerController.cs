@@ -4,6 +4,7 @@ namespace UrlsAndRoutes.Controllers
 {
     public class CustomerController : Controller
     {
+        [Route("~/Test", Name="TestRoute")]
         public ActionResult Index()
         {
             ViewBag.Controller = "Customer";

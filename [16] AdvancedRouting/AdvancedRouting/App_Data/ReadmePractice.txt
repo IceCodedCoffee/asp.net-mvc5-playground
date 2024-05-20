@@ -20,3 +20,5 @@
 10. Redirect the request to /Home/UrlsAndActions to /Home/Index/Id using an anonymous type.
 
 11. Generate an outgoing URL /App/{action} using the route name.
+
+12. Generate an outgoing URL /Test to /Customer/Index using an attribute route name.
