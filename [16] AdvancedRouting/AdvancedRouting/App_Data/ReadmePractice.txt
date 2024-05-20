@@ -25,3 +25,5 @@
 
 13. Generate a new Area Admin.
 	-> Rightclick Project / Add / New Scaffolded Item / MVC / MVC 5 Area
+
+14. Resolve the ambiguous controller issue and prioritize the controller from the main application.
