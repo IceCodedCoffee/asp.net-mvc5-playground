@@ -27,3 +27,5 @@
 	-> Rightclick Project / Add / New Scaffolded Item / MVC / MVC 5 Area
 
 14. Resolve the ambiguous controller issue and prioritize the controller from the main application.
+
+15. Define a route for the CustomerController using Attribute routing.

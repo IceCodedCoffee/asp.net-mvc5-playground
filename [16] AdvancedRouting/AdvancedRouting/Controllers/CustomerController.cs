@@ -2,6 +2,7 @@
 
 namespace UrlsAndRoutes.Controllers
 {
+    [RoutePrefix("Users")]
     public class CustomerController : Controller
     {
         [Route("~/Test", Name="TestRoute")]
@@ -18,6 +19,7 @@ namespace UrlsAndRoutes.Controllers
             return $"User: {user}, ID: {id}";
         }
 
+        [Route("Add/{user}/{password}")]
         public string ChangePass(string user, string password)
         {
             return $"ChangePass Method - User: {user}, Pass: {password}";
