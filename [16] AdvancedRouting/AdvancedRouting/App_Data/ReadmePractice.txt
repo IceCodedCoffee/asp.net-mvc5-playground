@@ -22,3 +22,5 @@
 11. Generate an outgoing URL /App/{action} using the route name.
 
 12. Generate an outgoing URL /Test to /Customer/Index using an attribute route name.
+
+13. Generate a new Area Admin.
