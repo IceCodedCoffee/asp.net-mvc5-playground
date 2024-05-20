@@ -24,3 +24,4 @@
 12. Generate an outgoing URL /Test to /Customer/Index using an attribute route name.
 
 13. Generate a new Area Admin.
+	-> Rightclick Project / Add / New Scaffolded Item / MVC / MVC 5 Area
