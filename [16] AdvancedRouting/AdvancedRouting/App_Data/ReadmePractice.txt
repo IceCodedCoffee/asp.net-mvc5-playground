@@ -18,3 +18,5 @@
 9. Redirect the request to /Home/UrlsAndActions to /Home/Index using the action name alone.
 
 10. Redirect the request to /Home/UrlsAndActions to /Home/Index/Id using an anonymous type.
+
+11. Generate an outgoing URL /App/{action} using the route name.
