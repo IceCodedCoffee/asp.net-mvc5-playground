@@ -33,3 +33,5 @@
 16. Generate an outgoing URL to Admin/Home/About in Admin/Home/Index.
 
 17. Generate an outgoing URL to Support/Home/Index in Admin/Home/Index.
+
+18. Generate an outgoing URL to /Home/Index (top-level controller) in Admin/Home/Index.
