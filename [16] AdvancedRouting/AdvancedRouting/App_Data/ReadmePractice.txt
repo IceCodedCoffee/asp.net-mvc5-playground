@@ -29,3 +29,5 @@
 14. Resolve the ambiguous controller issue and prioritize the controller from the main application.
 
 15. Define an Area 'Services' for the CustomerController using Attribute routing.
+
+16. Generate an outgoing URL to Admin/Home/About in Admin/Home/Index.
