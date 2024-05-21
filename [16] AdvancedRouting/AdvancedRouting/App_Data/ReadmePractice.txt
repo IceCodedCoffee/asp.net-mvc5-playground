@@ -31,3 +31,5 @@
 15. Define an Area 'Services' for the CustomerController using Attribute routing.
 
 16. Generate an outgoing URL to Admin/Home/About in Admin/Home/Index.
+
+17. Generate an outgoing URL to Support/Home/Index in Admin/Home/Index.
